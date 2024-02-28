@@ -18,7 +18,6 @@ import CardBody from "./CardBody";
 import CardActionBar from "./CardActionBar";
 
 export default function CardComponent({ card }) {
-  console.log(card);
   return (
     <Card sx={{ width: 250, m: 2 }}>
       <CardActionArea>
