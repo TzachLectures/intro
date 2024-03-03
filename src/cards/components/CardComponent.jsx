@@ -1,24 +1,11 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardHeader,
-  CardMedia,
-  Divider,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Card, CardActionArea } from "@mui/material";
 
 import CardHeaderComponent from "./CardHeaderComponent";
 import CardBody from "./CardBody";
 import CardActionBar from "./CardActionBar";
 
 export default function CardComponent({ card }) {
-  console.log("");
   return (
     <Card sx={{ width: 250, m: 2 }}>
       <CardActionArea>
