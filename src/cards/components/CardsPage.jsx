@@ -1,6 +1,6 @@
 import React from "react";
 import CardComponent from "./CardComponent";
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 const cards = [
   {
     _id: "63765801e20ed868a69a62c4",
@@ -97,7 +97,11 @@ const cards = [
 ];
 
 export default function CardsPage() {
-  return (
+  return cards.length === 0 ? (
+    <Typography>
+      Oops… it seems there are no business cards to display
+    </Typography>
+  ) : (
     <Container sx={{ display: "flex", flexWrap: "wrap" }}>
       {cards.map((card) => (
         <CardComponent card={card} />

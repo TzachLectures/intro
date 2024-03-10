@@ -1,14 +1,16 @@
-import { Typography } from "@mui/material";
-import "./App.css";
-import CardComponent from "./cards/components/CardComponent";
-import TasksPage from "./tasks/TasksPage";
-import CardsPage from "./cards/components/CardsPage";
+import FormPage from "./components/FormPage";
+let fieldName = "phone";
 function App() {
-  return (
-    <>
-      <CardsPage />
-    </>
-  );
+  let user = {
+    name: "tzach",
+    phone: "12123",
+  };
+
+  let user2 = { ...user, [fieldName]: "13123" };
+
+  console.log(user2);
+
+  return <div></div>;
 }
 
 export default App;
