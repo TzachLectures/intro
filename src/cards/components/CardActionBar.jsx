@@ -9,17 +9,17 @@ export default function CardActionBar({
   handleCardDelete,
   cardId,
 }) {
+  const handleCardEdit = (id) => {
+    console.log("navigate to edit page for card " + id);
+  };
+
   return (
     <CardActions sx={{ paddingTop: 0, justifyContent: "space-between" }}>
       <Box>
-        <IconButton
-          onClick={() => {
-            handleCardDelete(cardId);
-          }}
-        >
+        <IconButton onClick={() => handleCardDelete(cardId)}>
           <DeleteIcon />
         </IconButton>
-        <IconButton>
+        <IconButton onClick={() => handleCardEdit(cardId)}>
           <ModeEditIcon />
         </IconButton>
       </Box>

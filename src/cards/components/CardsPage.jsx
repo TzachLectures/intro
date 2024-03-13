@@ -100,6 +100,7 @@ export default function CardsPage() {
   const handleCardDelete = (id) => {
     console.log("you deleted card no" + id);
   };
+
   const handleCardLike = (id) => {
     console.log("you liked card no" + id);
   };
@@ -112,6 +113,7 @@ export default function CardsPage() {
     <Container sx={{ display: "flex", flexWrap: "wrap" }}>
       {cards.map((card) => (
         <CardComponent
+          key={card._id}
           card={card}
           handleCardDelete={handleCardDelete}
           handleCardLike={handleCardLike}
